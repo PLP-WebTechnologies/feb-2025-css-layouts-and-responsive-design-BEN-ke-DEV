@@ -1,0 +1,80 @@
+/* styles.css */
+
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar using Flexbox */
+.navbar {
+    display: flex; /* Activates Flexbox */
+    justify-content: space-between; /* Spaces items evenly */
+    align-items: center; /* Centers vertically */
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1rem; /* Space between links */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Main container using CSS Grid */
+.container {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* 3:1 ratio */
+    gap: 1rem; /* Space between columns */
+    padding: 1rem;
+    min-height: 80vh; /* Minimum height */
+}
+
+.content {
+    background-color: #f0f0f0;
+    padding: 1rem;
+}
+
+.sidebar {
+    background-color: #e0e0e0;
+    padding: 1rem;
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+}
+
+/* Tablet view (768px and below) */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Stack content */
+    }
+    
+    .navbar {
+        flex-direction: column; /* Stack nav items */
+        padding: 1rem;
+    }
+    
+    .nav-links {
+        margin-top: 1rem;
+    }
+}
+
+/* Mobile view (480px and below) */
+@media (max-width: 480px) {
+    .nav-links {
+        flex-direction: column; /* Stack links */
+        align-items: center;
+        gap: 0.5rem;
+    }
+}
